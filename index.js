@@ -12,5 +12,11 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  return tutorials.map(function(tut){ // freeCodeCamp had example to upcase using for loop
+    tut = tut.split(' ')
+    for (let i = 0; i < tut.length; i++) {
+      tut[i] = tut[i].charAt(0).toUpperCase() + tut[i].slice(1)
+    }
+    return tut.join(' ')
+  })
 }
